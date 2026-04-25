@@ -10,7 +10,7 @@ RUN npx prisma generate
 ENV PUBLIC_API_BASE_URL=
 RUN npm run build
 RUN npm prune --production
-
+ENV PORT=8080
 FROM node:18-alpine
 WORKDIR /app
 
